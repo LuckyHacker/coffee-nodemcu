@@ -5,4 +5,4 @@
 
 ### Simple on/off button:
 
-![luckycoffee](images/luckycoffee.jpeg)
+<img src="https://github.com/luckyhacker/coffee-nodemcu/images/luckycoffee.jpeg" width="48">
