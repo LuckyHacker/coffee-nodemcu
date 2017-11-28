@@ -44,6 +44,8 @@ h1 {
 </html>
 ]]
 
+coffee_relay_timeout_ms = 50
+us_to_ms = 1000
 indentifier = "CoffeeNode"
 coffee_gpio = 1
 gpio.mode(coffee_gpio, gpio.OUTPUT);
@@ -62,7 +64,7 @@ s:listen(80,function(conn)
 			client:send(ControlHTML);
 			if string.match(request, "?coffee=ON") then
 				gpio.write(coffee_gpio, gpio.HIGH);
-				tmr.delay(200 * 1000)
+				tmr.delay(coffee_relay_timeout_ms * us_to_ms)
 				gpio.write(coffee_gpio, gpio.LOW);
 			end
 		end
